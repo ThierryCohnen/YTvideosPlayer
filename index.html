@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="myscripts.js"></script>
+    <title>YTvideoPlayer</title>
+</head>
+<!-- <body style="background:black"> -->
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-8">
+                <a style="color: purple;" href="https://thierrycohnen.github.io/YTvideosPlayer/">https://thierrycohnen.github.io/YTvideosPlayer/</a> (Projet en cours de finition) <br> &nbsp;&nbsp; est un programme de lecture par morceaux d'une vidéo Youtube.
+                La possibilité de déplacer le curseur permet de se positionner dans la vidéo à l'endroit désiré. On peut ensuite appuyer sur le bouton 'Add Start' qui enregistre et affiche cette position dans une table HTML. Le bouton 'Add Stop' permet
+                de définir la fin de l'intervalle de lecture.<br><br>Grâce au bouton '+', on choisit alors le nombre de répétitions de cet interval et finalement le 'Add X times' ajoute ces paramètres à la liste HTML.
+                <br>Il est ainsi possible de créer plusieurs intervals et répétitions aux endroits choisis. Enfin, un click sur le 'Play All' permet la lecture suivie de tous ces intervals présents dans la table HTML affichée.
+                <br><br> Code source disponible sur: <a style="color: purple;" href="https://github.com/ThierryCohnen/YTvideosPlayer">https://github.com/ThierryCohnen/YTvideosPlayer</a>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col">
+            </div>
+            <div id="player" class="col-6">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- <div class="col-4">
+            </div> -->
+            <!-- <div class="col-4"> -->
+            <button class="btn btn-secondary" onclick="player.pauseVideo();">Pause</button>
+            <button type="button" class="btn btn-danger" onclick="player.playVideo(); ">Play</button>
+            <!-- </div> -->
+            <!-- <div class="col-4">
+            </div> -->
+        </div>
+        <div class="row justify-content-center">
+            <div>
+                <button id="btnStart" ; onclick="addStart(); ">Add Start</button>
+                <button disabled=true; id="btnStop" ; onclick="addStop(); ">Add Stop</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <p style="color:blue "> nombre de fois: <span id="sp01">0</span> &nbsp;<button disabled=true; id="btnPlus" onclick="myFunction() ">+</button>&nbsp;<button disabled=true; id="btnAdd" onclick="resetXtimes() ">Add X times</button></p>
+        </div>
+    </div>
+    <button onclick="playRow() ">Play All</button>
+
+    <table id="tableChoices" style="color:black "></table>
+    </div>
+</body>
+
+</html>
